@@ -1,0 +1,143 @@
+body {
+    margin: 0px;
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    background-position: right;
+    background-size: 950px;
+    background-repeat: no-repeat;
+  }
+
+  .main-container {
+    display: grid;
+    grid-template-columns: 28.5% 600px 33.5%;
+    align-items: center;
+    text-align: center;
+  }
+
+  .container-2 {
+    display: grid;
+    grid-template-columns: 300px 300px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 6px 0px black;
+    background-color: rgb(18, 75, 128);
+    align-items: center;
+    justify-items: stretch;
+  }
+
+  .sub-container-1 {
+    color: black;
+    height: 400px;
+    background-image: url(images/oziel-gomez-O255DOFraAc-unsplash.jpg);
+    background-position: right;
+    background-size: cover;
+    border-radius: 10px;
+    display: grid;
+    justify-content: center;
+  }
+
+  .text {
+    margin-top: 100px;
+    width: 220px;
+    line-height: 21px;
+  }
+
+  .sub-container-2 {
+    display: grid;
+    grid-template-rows: auto;
+    justify-content: center;
+  }
+
+  .inputs {
+    width: 210px;
+    border: none;
+    padding: 0px;
+  }
+
+  .inputs::placeholder {
+    color: white;
+  }
+
+  .inputs[type="text"],
+  [type="password"] {
+    margin: 8px;
+    padding: 8px 1px;
+    border-bottom: 1px solid white;
+    background-color: rgb(18, 75, 128);
+    color: white;
+  }
+
+  .eye-icon {
+    margin-left: -48px;
+    height: 15px;
+  }
+
+  .user-icon {
+    margin-left: -48px;
+    height: 16px;
+  }
+
+  .forget-password {
+    color: white;
+    font-size: x-small;
+    text-align: right;
+    margin-right: 15px;
+    margin-top: 7px;
+  }
+
+  .enter-button {
+    width: 235px;
+    margin-top: 35px;
+    padding: 10px;
+    border: 0.5px solid white;
+    border-radius: 50px;
+    color: rgb(18, 75, 128);
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s, opacity 0.15s;
+  }
+
+  .enter-button:hover {
+    background-color: rgba(206, 200, 231, 0);
+    color: white;
+  }
+
+  .enter-button:active {
+    opacity: 0.8;
+  }
+
+  .box-1 {
+    display: grid;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+
+  .sub-title-box {
+    display: grid;
+    width: 180px;
+  }
+
+  .wheelwise-logo {
+    width: 160px;
+    height: 80px;
+    object-fit: cover;
+  }
+
+  .title {
+    font-family: "Courier New", Courier, monospace;
+    font-weight: bold;
+    width: 160px;
+  }
+
+  .social-icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    column-gap: 15px;
+    align-items: last baseline;
+    margin-bottom: 6px;
+  }
+
+  .social-icon-fiw {
+    height: 15px;
+    background-color: aliceblue;
+    border-radius: 4px;
+  }
