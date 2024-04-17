@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign-Up in wheelwise rental cars</title>
+    {% load static %}
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Inconsolata:wght@400;500;600&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Orbitron&family=Patrick+Hand+SC&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="{% static 'images/wheelwise_removebg-3.png' %}" />
+    <style>
+      body {
+        margin: 0px;
+        font-family: "Montserrat";
+      }
+
+      .main-container {
+        background-image: url("/static/images/samuele-errico-piccarini-FMbWFDiVRPs-unsplash.jpg");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        display: grid;
+        grid-template-columns: 1fr 400px 1fr;
+        column-gap: 1px;
+        height: 550px;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .sub-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-content: center;
+        align-items: center;
+        vertical-align: middle;
+      }
+
+      .box1 {
+        width: 400px;
+        height: 120px;
+        display: flex;
+        justify-content: center;
+      }
+
+      .img-logo {
+        width: 180px;
+        height: 130px;
+        object-fit: cover;
+        object-position: center;
+      }
+
+      .box2 {
+        background-color: rgba(0, 0, 0, 0.62);
+        backdrop-filter: blur(4px);
+        height: 350px;
+        border-radius: 10px;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        font-weight: 600;
+      }
+
+      .signup-form {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+      }
+
+      #name,
+      #email,
+      #phone {
+        width: 180px;
+        padding: 4px 4px;
+        margin: 10px;
+        background-color: rgba(122, 122, 122, 0);
+        border: none;
+        border-bottom: 1.5px solid white;
+        border-radius: 5px;
+      }
+
+      .inputs::placeholder {
+        color: whitesmoke;
+        border: none;
+      }
+
+      .inputs[type="text"],
+      [type="email"] {
+        color: whitesmoke;
+        text-align: justify;
+      }
+
+      .login-link {
+        color: rgb(255, 180, 73);
+        font-size: small;
+        text-decoration: underline;
+        text-align: right;
+        padding-right: 20px;
+      }
+
+      .submit-btn {
+        margin-top: 30px;
+        margin-left: 3px;
+        padding: 10px 60px;
+        border-radius: 7px;
+        border: 1px solid;
+        transition: all 0.4s;
+        cursor: pointer;
+        font-weight: bold;
+        letter-spacing: 1px;
+      }
+
+      .submit-btn:hover {
+        background-color: rgb(255, 180, 73);
+        color: rgb(0, 0, 0);
+        border: 1px solid gray;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="sub-container1"></div>
+      <div class="sub-container2">
+        <div class="box1">
+          <img
+            class="img-logo"
+            src="{% static 'images/signup-wheelwise-logo.png' %}"
+            alt=""
+          />
+        </div>
+        <div class="box2">
+          <form action="" method="post" class="signup-form">
+            {% csrf_token %}
+            <table>
+              <tr class="form-table">
+                <td>
+                  <label for="">Name: </label>
+                </td>
+                <td>
+                  <input
+                    class="inputs"
+                    type="text"
+                    name="name"
+                    id="name"
+                    required
+                  />
+                </td>
+              </tr>
+              <tr class="form-table">
+                <td>
+                  <label for="">Email: </label>
+                </td>
+                <td>
+                  <input
+                    class="inputs"
+                    type="email"
+                    name="email"
+                    id="email"
+                    required
+                  />
+                </td>
+              </tr>
+              <tr class="form-table">
+                <td>
+                  <label for="">Phone: </label>
+                </td>
+                <td>
+                  <input
+                    class="inputs"
+                    type="text"
+                    name="phone"
+                    id="phone"
+                    required
+                  />
+                </td>
+              </tr>
+            </table>
+            <a class="login-link" href="{% url 'login_page2' %}"
+              >I have an account</a
+            >
+            <button class="submit-btn" type="submit">SUBMIT</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="sub-container3"></div>
+    </div>
+  </body>
+</html>

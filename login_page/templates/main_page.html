@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book your cars in wheelwise rental cars</title>
+    {% load static %}
+    <link rel="icon" href="{% static 'images/wheelwise_removebg-3.png' %}" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Inconsolata:wght@400;500;600&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Orbitron&family=Patrick+Hand+SC&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="{% static 'css/main.css' %}" />
+    <link rel="stylesheet" href="js/jquery.js" />
+    <script>
+      $(document).ready(function () {
+        $("#vehical-rental").click(function () {
+          $("#v-rental-div").show(fast);
+        });
+      });
+    </script>
+  </head>
+
+  <body>
+    <div class="main-container">
+      <div class="header-container">
+        <div class="site-logo-box">
+          <div>
+            <img
+              class="site-logo"
+              src="{% static 'images/signup-wheelwise-logo.png' %}"
+              alt="wheelwise"
+            />
+          </div>
+        </div>
+        <div class="header-details">
+          <div>
+            <a class="header-links" href="#about" id="about">About Us</a>
+          </div>
+          <div>
+            <a class="header-links" href="#services" id="services">services</a>
+          </div>
+          <div><a class="header-links" href="#blog" id="blog">Blog</a></div>
+          <div>
+            <a class="header-links" href="#contactus" id="contact"
+              >Contact Us</a
+            >
+          </div>
+        </div>
+        <div>
+          <a class="header-book-btn" href="{% url 'cars_page' %}">Book Now</a>
+        </div>
+      </div>
+      <div class="content-box">
+        <p class="content">
+          Drive Your Adventure with Wheelwise: Your Ultimate Rental Car
+          Experience Awaits!
+        </p>
+      </div>
+    </div>
+    <div id="about-content" class="about-content">
+      <p class="about-text" style="color: black">About Us</p>
+      <p class="about-para">
+        Wheelwise Rental Cars is a leading provider of premium car rental
+        services, offering a wide range of vehicles to suit every traveler's
+        needs. Established in 2024, we have quickly become a trusted name in the
+        rental car industry, serving customers across India .
+      </p>
+    </div>
+
+    <div id="service-content" class="services-content">
+      <p class="services-text" style="color: black">Our Services</p>
+      <div class="service-main-container">
+        <div class="service-sub-container">
+          <div>
+            <p class="service-sub-titles">Vehical rental</p>
+          </div>
+
+          <div>
+            <a href="#">
+              <img
+                id="vehical-rental"
+                class="service-img"
+                src="{% static 'images/vehical-rental.jpg' %}"
+                alt=""
+              />
+            </a>
+          </div>
+          <div>
+            <p class="service-sub-para">
+              Discover our extensive fleet of rental vehicles, from compact cars
+              to spacious SUVs, tailored to fit your travel needs.
+            </p>
+          </div>
+        </div>
+        <div class="service-sub-container">
+          <div><p class="service-sub-titles">Easy Reservations</p></div>
+          <div>
+            <a href="#"
+              ><img
+                class="service-img"
+                src="{% static 'images/Online-Car-Reservation-System.png' %}"
+                alt=""
+            /></a>
+          </div>
+          <div>
+            <p class="service-sub-para">
+              With our hassle-free booking system, secure your rental car in
+              just a few clicks and get ready for a smooth journey ahead.
+            </p>
+          </div>
+        </div>
+        <div class="service-sub-container">
+          <div><p class="service-sub-titles">Quality Assurance</p></div>
+          <div>
+            <a href=""
+              ><img
+                class="service-img"
+                src="{% static 'images/quality-management-automotive-industry-intelex-2048x1366.png' %}"
+                alt=""
+            /></a>
+          </div>
+          <div>
+            <p class="service-sub-para">
+              Rest assured knowing that each rental vehicle undergoes rigorous
+              maintenance and inspection processes, guaranteeing a safe and
+              reliable journey for every customer.
+            </p>
+          </div>
+        </div>
+        <div class="service-sub-container">
+          <div><p class="service-sub-titles">Safety First</p></div>
+          <div>
+            <a href=""
+              ><img
+                class="service-img"
+                src="{% static 'images/safety-first.png' %}"
+                alt=""
+            /></a>
+          </div>
+          <div>
+            <p class="service-sub-para">
+              Your safety is our top priority. With stringent safety measures in
+              place, you can embark on your journey with confidence and peace of
+              mind.
+            </p>
+          </div>
+        </div>
+        <div class="service-sub-container">
+          <div><p class="service-sub-titles">Airport Services</p></div>
+          <div>
+            <a href=""
+              ><img
+                class="service-img-div"
+                src="{% static 'images/goCarsHero.svg' %}"
+                alt=""
+            /></a>
+          </div>
+          <div>
+            <p class="service-sub-para">
+              Enjoy seamless airport pickup and drop-off services, ensuring a
+              stress-free start and end to your travel adventures.
+            </p>
+          </div>
+        </div>
+        <div class="service-sub-container">
+          <div><p class="service-sub-titles">24/7 Support</p></div>
+          <div>
+            <a href=""
+              ><img
+                class="service-img"
+                src="{% static 'images/24-hour-service.jpg' %}"
+                alt=""
+            /></a>
+          </div>
+          <div>
+            <p class="service-sub-para">
+              Our dedicated support team is available around the clock to assist
+              you with any queries or concerns, ensuring a seamless rental
+              experience from start to finish.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="blog-content" class="blog-content">
+      <div class="blog-header">
+        <p class="blog-text">Blog</p>
+        <h1 class="blog-title">Tips for Renting a Car</h1>
+        <div class="blog-meta">
+          Published on February 22, 2024 by Durga Prasad Ramadugu
+        </div>
+      </div>
+      <div class="blog-para">
+        <p>
+          Are you planning a road trip or traveling to a new city and
+          considering renting a car? Renting a car can be a convenient and
+          flexible option for getting around, but it's essential to be prepared
+          and know what to expect. Here are some tips to help you navigate the
+          car rental process:
+        </p>
+        <ol>
+          <li>
+            Research Rental Companies: Compare prices, reviews, and rental
+            policies from different rental companies to find the best option for
+            your needs.
+          </li>
+          <li>
+            Book in Advance: Reserve your rental car ahead of time, especially
+            during peak travel seasons, to ensure availability and secure the
+            best rates.
+          </li>
+          <li>
+            Check Insurance Coverage: Review your existing car insurance policy
+            and credit card benefits to see if they provide coverage for rental
+            cars. Consider purchasing additional insurance from the rental
+            company if needed.
+          </li>
+          <li>
+            Inspect the Car: Before driving off, thoroughly inspect the rental
+            car for any existing damage and report it to the rental company to
+            avoid being held responsible.
+          </li>
+          <li>
+            Review Rental Agreement: Read the rental agreement carefully, paying
+            attention to fuel policies, mileage limits, and additional fees. Ask
+            questions if anything is unclear.
+          </li>
+          <li>
+            Return on Time: Be sure to return the rental car on time to avoid
+            late fees. Fill up the gas tank before returning the car if required
+            by the rental company.
+          </li>
+        </ol>
+        <p>
+          By following these tips, you can make the most out of your car rental
+          experience and enjoy a smooth and hassle-free journey.
+        </p>
+      </div>
+    </div>
+    <div id="contact-content" class="contact-content" style="color: white">
+      <div class="contact-flex">
+        <div class="contact-grid">
+          <div><p>Contact info</p></div>
+          <div>
+            <p>
+              <img
+                src="{% static 'icons/Phone-Mobile-Phone--Streamline-Core.svg' %}"
+                alt=""
+              />
+              +91 9441881437
+            </p>
+          </div>
+          <div>
+            <a
+              href="https://mail.google.com/mail/u/0/#inbox?compose=CllgCJlKpGmzXcjCJPRslWzXtzdXlsSKLTNpvNPRNLPvXgwngVnnPfkMwWJktfcKCLCNtxKztVB"
+              target="_blank"
+              style="text-decoration: none; color: white"
+              ><img
+                src="{% static 'icons/Mail-Send-Envelope--Streamline-Core.svg' %}"
+                alt=""
+              />
+              info@gmail.com</a
+            >
+          </div>
+        </div>
+        <div class="follow-us-box">
+          <p>Follow us on</p>
+          <a href="https://www.facebook.com/" target="_blank"
+            ><img
+              class="contact-icons"
+              src="{% static 'icons/Facebook-Logo-2--Streamline-Logos.svg' %}"
+              alt=""
+          /></a>
+          <a href="https://www.instagram.com/" target="_blank"
+            ><img
+              class="contact-icons"
+              src="{% static 'icons/Instagram--Streamline-Core.svg' %}"
+              alt=""
+          /></a>
+          <a href="https://web.whatsapp.com/" target="_blank"
+            ><img
+              class="contact-icons"
+              src="{% static 'icons/Whatsapp-Logo--Streamline-Logos.svg' %}"
+              alt=""
+          /></a>
+        </div>
+      </div>
+    </div>
+    <div class="scrollup">
+      <img
+        class="scrollToTop"
+        id="scrollToTop"
+        src="{% static 'icons/Up-2-Short-Arrow--Streamline-Guidance.svg' %}"
+        alt="Scroll to Top"
+        width="15"
+        height="15"
+      />
+    </div>
+
+    <script>
+      // JavaScript to toggle the display of About Us content
+      document
+        .getElementById("about")
+        .addEventListener("click", function (event) {
+          event.preventDefault();
+          document.getElementById("about-content").style.display = "grid";
+          document
+            .getElementById("about-content")
+            .scrollIntoView({ behavior: "smooth" });
+        });
+
+      document
+        .getElementById("services")
+        .addEventListener("click", function (event) {
+          event.preventDefault();
+          document.getElementById("service-content").style.display = "grid";
+          document
+            .getElementById("service-content")
+            .scrollIntoView({ behavior: "smooth" });
+        });
+
+      document
+        .getElementById("blog")
+        .addEventListener("click", function (event) {
+          event.preventDefault();
+          document.getElementById("blog-content").style.display = "grid";
+          document
+            .getElementById("blog-content")
+            .scrollIntoView({ behavior: "smooth" });
+        });
+
+      document
+        .getElementById("contact")
+        .addEventListener("click", function (event) {
+          event.preventDefault();
+          document.getElementById("contact-content").style.display = "grid";
+          document
+            .getElementById("contact-content")
+            .scrollIntoView({ behavior: "smooth" });
+        });
+
+      window.onscroll = function () {
+        scrollFunction();
+      };
+
+      function scrollFunction() {
+        if (
+          document.body.scrollTop > 20 ||
+          document.documentElement.scrollTop > 20
+        ) {
+          document.getElementById("scrollToTop").style.display = "block";
+        } else {
+          document.getElementById("scrollToTop").style.display = "none";
+        }
+      }
+
+      // Smooth scroll to top when arrow is clicked
+      document
+        .getElementById("scrollToTop")
+        .addEventListener("click", function () {
+          scrollToTop(1200); // Adjust the duration as needed (in milliseconds)
+        });
+
+      function scrollToTop(duration) {
+        const start = window.pageYOffset;
+        const startTime =
+          "now" in window.performance
+            ? performance.now()
+            : new Date().getTime();
+
+        function scroll() {
+          const now =
+            "now" in window.performance
+              ? performance.now()
+              : new Date().getTime();
+          const time = Math.min(1, (now - startTime) / duration);
+          window.scroll(0, Math.ceil(time * (0 - start) + start));
+
+          if (window.pageYOffset === 0) return;
+          requestAnimationFrame(scroll);
+        }
+
+        scroll();
+      }
+    </script>
+  </body>
+</html>

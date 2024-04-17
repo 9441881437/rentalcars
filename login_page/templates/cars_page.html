@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>book your cars in wheelwise rental cars</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Inconsolata:wght@400;500;600&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Orbitron&family=Patrick+Hand+SC&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: Montserrat;
+        height: 200vh;
+      }
+
+      .main-container {
+        display: grid;
+        /* width: max-content 100%; */
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+      }
+
+      .header-text {
+        font-family: Caveat;
+        font-size: xx-large;
+        font-weight: bolder;
+        margin-bottom: 60px;
+      }
+
+      .cars-gallery {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        row-gap: 80px;
+        column-gap: 100px;
+        justify-content: space-evenly;
+        font-weight: 500;
+      }
+
+      .main-box {
+        display: grid;
+        grid-template-rows: 1fr 4fr 1fr 1fr;
+        background-color: rgb(255, 255, 255);
+        width: 280px;
+        height: 400px;
+        border: 1px solid rgb(187, 187, 187);
+        border-radius: 7px;
+        position: relative;
+      }
+
+      .main-box > p {
+        display: inline-block;
+      }
+
+      .car-name {
+        margin-top: 20px;
+      }
+
+      .car-img {
+        width: 100%;
+        height: 100%;
+      }
+
+      .img1 {
+        width: 100%;
+        height: 227px;
+        object-fit: cover;
+        object-position: bottom;
+      }
+
+      .car-details {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+      }
+
+      .car-details > p {
+        display: inline-block;
+        margin: 0px;
+      }
+
+      .car-cost {
+        display: grid;
+        align-items: center;
+        margin-bottom: 40px;
+      }
+
+      .main-box > button {
+        background-color: white;
+        border: 1px solid gray;
+        border-radius: 5px;
+        font-weight: 600;
+        width: 90px;
+        height: 40px;
+        position: absolute;
+        bottom: -20px;
+        left: 95px;
+        transition: all 0.3s;
+      }
+
+      .main-box > button:hover {
+        background-color: rgb(255, 180, 73);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main-container">
+      <div><p class="header-text">We Have Everything You Need</p></div>
+      <div>
+        <div class="cars-gallery">
+          <div class="main-box">
+            <div class="car-name">Audi A6</div>
+            <div class="car-img1">
+              <img
+                src="images/oziel-gomez-O255DOFraAc-unsplash.jpg"
+                alt=""
+                class="img1"
+              />
+            </div>
+            <div class="car-details">
+              <p>Automatic</p>
+              <p>5 Persons</p>
+            </div>
+            <div class="car-cost">&#8377;6500/Day</div>
+            <button>Book now</button>
+          </div>
+          <div class="main-box">
+            <div class="car-name">Mahendra THAR</div>
+            <div class="car-img1"></div>
+            <div class="car-details">
+              <p>Automatic</p>
+              <p>5 Persons</p>
+            </div>
+            <div class="car-cost">&#8377;5500/Day</div>
+            <button>Book now</button>
+          </div>
+          <div class="main-box">
+            <div class="car-name">Breeza</div>
+            <div class="car-img1"></div>
+            <div class="car-details">
+              <p>Automatic</p>
+              <p>5 Persons</p>
+            </div>
+            <div class="car-cost">&#8377;3500/Day</div>
+            <button>Book now</button>
+          </div>
+          <div class="main-box">
+            <div class="car-name">Audi</div>
+            <div class="car-img1"></div>
+            <div class="car-details">
+              <p>Automatic</p>
+              <p>5 Persons</p>
+            </div>
+            <div class="car-cost">&#8377;3500/Day</div>
+            <button>Book now</button>
+          </div>
+          <div class="main-box">
+            <div class="car-name">Audi</div>
+            <div class="car-img1"></div>
+            <div class="car-details">
+              <p>Automatic</p>
+              <p>5 Persons</p>
+            </div>
+            <div class="car-cost">&#8377;3500/Day</div>
+            <button>Book now</button>
+          </div>
+          <div class="main-box">
+            <div class="car-name">Audi</div>
+            <div class="car-img1"></div>
+            <div class="car-details">
+              <p>Automatic</p>
+              <p>5 Persons</p>
+            </div>
+            <div class="car-cost">&#8377;3500/Day</div>
+            <button>Book now</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

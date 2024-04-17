@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>login wheelwise rental cars</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/login.css' %}" />
+    <link rel="icon" href="{% static 'images/wheelwise_removebg-3.png' %}" />
+    <script src="{% static 'js/jquery.js' %}"></script>
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="container-1">
+        <svg width="750" height="547">
+          <polygon
+            points="0,0 0,1200 680,0 "
+            style="fill: rgb(18, 75, 128); stroke-width: 0; fill-rule: evenodd"
+          />
+          Sorry, your browser does not support inline SVG.
+        </svg>
+      </div>
+      <div class="container-2">
+        <div class="sub-container-1">
+          <h4 class="text">
+            TRAVEL IS THE ONLY THING YOU BUY THAT MAKES YOU RICHER
+          </h4>
+          <div class="social-icons">
+            <a href="https://www.facebook.com/" target="_blank"
+              ><img
+                class="social-icon-fiw"
+                src="{% static 'icons/Facebook--Streamline-Ios-14.png' %}"
+                alt=""
+            /></a>
+            <a href="https://www.instagram.com/" target="_blank"
+              ><img
+                class="social-icon-fiw"
+                src="{% static 'icons/Instagram--Streamline-Ios-14.png' %}"
+                alt=""
+            /></a>
+            <a href="https://web.whatsapp.com/" target="_blank"
+              ><img
+                class="social-icon-fiw"
+                src="{% static 'icons/Whatsapp--Streamline-Ios-14.png' %}"
+                alt=""
+            /></a>
+          </div>
+        </div>
+        <div class="sub-container-2">
+          <div class="main-title-box">
+            <div class="sub-title-box">
+              <!-- <div class="box-1"></div> -->
+              <div>
+                <img
+                  class="wheelwise-logo"
+                  src="{% static 'images/Wheelwise (6).png' %}"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+          <div class="form-box">
+            <form
+              action="{% url 'main_page' %}"
+              method="post"
+              style="display: grid"
+            >
+              {% csrf_token %}
+              <table>
+                <tr>
+                  <td>
+                    <input
+                      class="inputs"
+                      type="text"
+                      name="username"
+                      id="username"
+                      placeholder="Username"
+                      required
+                    />
+                  </td>
+                  <td>
+                    <img
+                      class="user-icon"
+                      src="{% static 'icons/user.svg' %}"
+                      alt=""
+                    />
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div style="position: relative">
+                      <input
+                        class="inputs"
+                        type="password"
+                        name="password"
+                        id="password"
+                        placeholder="Password"
+                        required
+                        title="Password must contain at least one number, one lowercase
+                        letter, and be at least 6 characters long."
+                      />
+                      <img
+                        class="eye-icon"
+                        src="{% static 'icons/eye-off.svg' %}"
+                        alt=""
+                        style="
+                          position: absolute;
+                          top: 50%;
+                          transform: translateY(-50%);
+                          right: 10px;
+                        "
+                      />
+                    </div>
+                  </td>
+                </tr>
+              </table>
+              <div class="signUp-forget-box">
+                <a class="sign-up" href="{% url 'register' %}">Sign-Up</a>
+              <a class="forget-password" href="">Forget Your Password ?</a>
+              </div>
+              
+              <button class="enter-button" onclick="return validatepassword()">
+                ENTER
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="container-3"></div>
+    </div>
+
+    <script>
+      function validatepassword() {
+        var password = document.getElementById("password").value;
+        var pattern = /^(?=.*\d)(?=.*[a-z]).{6,}$/;
+        if (!pattern.test(password)) {
+          if (!pattern.test(password)) {
+            alert("Invalid Password");
+          }
+          return false;
+        }
+        return true;
+      }
+    </script>
+
+    <script>
+      $(document).ready(function () {
+        $("#password")
+          .mouseover(function () {
+            $("#passwordInfo").css("display", "block");
+          })
+          .mouseout(function () {
+            $("#passwordInfo").css("display", "none");
+          });
+      });
+    </script>
+  </body>
+</html>
